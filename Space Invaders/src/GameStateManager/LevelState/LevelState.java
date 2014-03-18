@@ -54,7 +54,7 @@ public abstract class LevelState extends GameState {
 	public void init() {
 
 		bg = new Background();
-		player = new Player();
+		player = Player.getInstance();
 
 		player.setPosition(320, 440);
 

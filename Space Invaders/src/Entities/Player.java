@@ -25,7 +25,16 @@ public class Player extends MapObject {
 	private int bulletM;
 	private BufferedImage[] playerSpriteSheet;
 
-	public Player() {
+	private static Player instance; 
+	
+	public static Player getInstance()
+	{
+		if (instance == null)
+			instance = new Player();
+		return instance;
+	}
+	
+	private Player() {
 		playerI = ImageLoader.playerI;
 
 		width = 70;
